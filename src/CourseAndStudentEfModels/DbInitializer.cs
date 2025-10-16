@@ -41,13 +41,13 @@ static class DbInitializer
 
     private static void SeedData(AppContext context)
     {
-        for (var i = 1; i < 100; i++)
+        for (var i = 1; i < 50; i++)
             context.Students
                 .Add(new Student { Name = $"Student_{i}" });
         context.SaveChanges();
 
         var random = new Random();
-        for (var i = 1; i <= 30; i++)
+        for (var i = 1; i <= 10; i++)
         {
             var course = new Course { Name = $"Course_{i}" };
             var r = random.Next(0, 12);
@@ -57,8 +57,6 @@ static class DbInitializer
                 context.Students.GetRandomElements(r));
             context.Courses.Add(course);
         }
-
-        //Console.WriteLine();
 
         context.SaveChanges();
     }

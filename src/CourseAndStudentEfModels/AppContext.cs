@@ -1,6 +1,6 @@
 ﻿namespace CourseAndStudentEfModels;
 
-public abstract class AppContext : DbContext
+internal abstract class AppContext : DbContext
 {
     public DbSet<Course> Courses { get; set; }
     public DbSet<Student> Students { get; set; }

@@ -1,6 +1,6 @@
 ﻿using CourseAndStudentEfModels.VirtualDb;
 
-var data = VirtualDataManagerBuilder.DataManager;
+var data = VirtualDataManagerBuilder.DataManager; 
 
 foreach (var item in data.Students.Items) Console.WriteLine(item);
 

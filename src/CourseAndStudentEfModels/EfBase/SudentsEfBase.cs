@@ -2,7 +2,7 @@
 
 public class StudentsEfBase : IStudentsRep
 {
-    public AppContext Context { private get; init; } = null!;
+    internal AppContext Context { private get; init; } = null!;
 
     public IEnumerable<Student> Items => Context.Students;
 
