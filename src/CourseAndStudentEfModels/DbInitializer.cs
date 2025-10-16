@@ -21,9 +21,10 @@ static class DbInitializer
                 Console.WriteLine("Применение миграций...");
                 context.Database.Migrate();
             }
-            else if(!context.Students.Any())
+            else 
             {
                 Console.WriteLine("Миграций нет. Используем EnsureCreated...");
+                context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
                 SeedData(context);
                 foreach (var name in TableNames(context))

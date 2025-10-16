@@ -1,6 +1,7 @@
-﻿using CourseAndStudentEfModels.VirtualDb;
+﻿//using CourseAndStudentEfModels.VirtualDb;
+using CourseAndStudentEfModels.SqLite;
 
-var data = VirtualDataManagerBuilder.DataManager; 
+var data = SqLiteDataManagerBuilder.DataManager; 
 
 foreach (var item in data.Students.Items) Console.WriteLine(item);
 
